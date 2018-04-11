@@ -1,0 +1,49 @@
+<%- include layouts/header.ejs %>
+
+        <div class="page-data">
+         <div class="data-btn">
+           <button onClick="additem();">+ Add</button>
+         </div>
+         <div class="data-table">
+            <table border="1" cellpadding="7" cellspacing="7">
+                <tr>
+                    <th width="50px">No</th>
+                    <th>item</th>
+                    <th>Approve</th>
+                    <th>Reject</th>
+                    
+                    <th width="120px">Action</th>
+                </tr>
+                               
+                <% if(data.length){ 
+                                
+                 for(var i = 0;i < data.length;i++) { %>
+                 
+                <tr>
+                    <td><%=(i+1)%></td>
+                    <td><%=data[i].item%></td>
+                    <td><%=data[i].approve%></td>
+                    <td><%=data[i].reject%></td>
+
+                    <td>
+                        <a class="a-inside edit" href="../items/edit/<%=data[i].id%>">Edit</a>
+                       
+                        <a class="a-inside delete" href="../items/delete/<%=data[i].id%>">Delete</a>
+                       
+                    </td>
+                </tr>
+            <% }
+            
+             }else{ %>
+                 <tr>
+                    <td colspan="3">No item</td>
+                 </tr>
+            <% } %>
+                
+                              
+                
+            </table>
+         </div>
+        </div>
+        
+

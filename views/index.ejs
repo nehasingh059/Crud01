@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title><%=(locals.title) ?></title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+  <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>-->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>-->
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"> </script>-->
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+  function add()
+  {
+
+  var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+  }
+  </script>
+</head>
+<body style="background-color: gray">
+
+<nav class="navbar navbar-default"">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+  </div>
+</nav>
+
+<form class="form-group" role="search" style="width: 800px; margin-left: 350px;">
+  <div class="input-group" style="position: relative" >
+    <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term" style="position: relative,width">
+  <div class="input-group-btn">
+      <button class="btn btn-info" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+    </div>
+  </div>
+</form>
+
+<a class="btn btn-success btn-lg" style="margin-left: 1080px;" onclick='add()' >
+Add 
+</a>
+<div id="myDIV" style="display:none;">
+<div class="panel panel-primary" style="width:800px; margin-left: 350px; height: 70px;" >
+  <div class="panel-body">
+    <div class="form-group">
+      <input type="text" class="form-control" style="width: 50%">
+      <a class="btn btn-success btn-lg" style="margin-left: 400px; margin-top: -50px;" onclick='add()'>
+	  
+        Submit
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="container" style="width: 830px; margin-left: 335px;">
+    <ul class="list-group">
+	    <li class="list-group-item">PHP</li>
+    <li class="list-group-item">NODEJS</li>
+    <li class="list-group-item">ANGULAR</li>
+      <li class="list-group-item">HTML</li>
+      <li class="list-group-item">CSS</li>
+      <li class="list-group-item">PYTHON</li>
+      <li class="list-group-item">DJANGO</li>
+      <li class="list-group-item">BOOTSTRAP</li>
+  </ul>
+</div>
+
+</body>
+</html>
+
